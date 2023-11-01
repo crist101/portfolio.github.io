@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <video playsinline autoplay muted loop poster="homepage/image 30.png">
+            <source src="homepage/1/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav class="nav">
+            <div class="logo">
+                <img src="homepage/logo.png" alt="logo" srcset="homepage/logo.png">
+            </div>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="#Electric Scooter">
+                            Electic Scooter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Accessories">
+                            Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Blog">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#About US">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Electric Scooter">
+                            Reviews
+                        </a>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li>
+                        <a href="#Search" class="search-icon">
+                            <span>Search </span>
+                            <img src="homepage/icon/Group 108.png" alt="Search" srcset="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ACcount" class="account-icon">
+                            <span>Account </span>
+                            <img src="homepage/icon/Group 86.png" alt="Search" srcset="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Cart" class="cart-icon">
+                            <span>Cart </span>
+                            <img src="homepage/icon/Group 1.png" alt="Search" srcset="">
+                        </a>
+                    </li>
+                    <li class="language" id="select-language">
+                        <a href="#" id="selected-language">
+                            <span>Language </span>
+                            <img src="h24/us.png" alt="SelectedFlag">
+                            <img src="homepage/chevron-down.svg" alt="chevron-down">
+                        </a>
+                        <div class="Selection">
+                            <ul>
+                                <li data-src="h24/ad.png">
+                                    <img src="h24/ad.png" alt="ad"> AD
+                                </li>
+                                <li data-src="h24/ae.png">
+                                    <img src="h24/ae.png" alt="ae"> ae
+                                </li>
+                                <li data-src="h24/us.png">
+                                    <img src="h24/us.png" alt="us"> us-EN
+                                </li>
+                                <li data-src="h24/ph.png">
+                                    <img src="h24/ph.png" alt="ph"> ph
+                                </li>
+                                <li data-src="h24/pr.png">
+                                    <img src="h24/pr.png" alt="pr"> pr
+                                </li>
+                                <li data-src="h24/ps.png">
+                                    <img src="h24/ps.png" alt="ps"> ps
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="hamburger">
+                <span></span> <span></span> <span></span>
+            </button>
+        </nav>
+        <h1>
+            Make Your Life Electric<br/>
+            <a href="#Discover More" id="discovermore">Discover More →</a>
+        </h1>
+    </header>
+    <main>
+        <div class="info">
+            <div class="info-item">
+                <img src="homepage/icon/delivery.png" alt="Info">
+                <p>
+                    <span class="info-label">Fast</span> Delivery
+                </p>
+            </div>
+            <div class="info-item">
+                <img src="homepage/icon/security.png" alt="Security">
+                <p>
+                    <span class="info-label">1 Year</span> Warranty
+                </p>
+            </div>
+            <div class="info-item">
+                <img src="homepage/icon/shipping.png" alt="Shipping">
+                <p>
+                    <span class="info-label">Free</span> Shipping
+                </p>
+            </div>
+            <div class="info-item">
+                <img src="homepage/icon/technical-support.png"  alt="Technical Support">
+                <p>
+                    <span class="info-label">Live</span> Customer Service
+                </p>
+            </div>
+            <div class="info-item">
+                <img src="homepage/icon/smile 1.png" alt="Info">
+                <p>
+                    <span class="info-label">Comfortable</span> Ride
+                </p>
+            </div>
+        </div>
+        <div class="featured-product">               
+            <h1>Pack Everything & Ride In Style</h1>
+            <img src="homepage/2/Group 89.png" alt="Feature Product">
+            <ul class="featured-details">
+                <li>
+                    350 W
+                    <span>Motor</span>
+                </li>
+                <li>
+
+                    45km     
+                    <span>Range</span>
+                </li>
+                <li>
+                    10"
+                    <span>Wheel Diameter</span>
+                </li>
+                <li>
+                    30km/h
+                    <span>Max. Speed</span>
+                </li>
+            </ul>
+        </div>
+        <div class="featured-image">
+            <video playsinline autoplay muted loop poster="homepage/image 30.png">
+                <source src="homepage/3/video_10s.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="featured-image-multiple">
+            <div class="group-image" id="slider">
+                <input class="imgCheck" type="radio" name="slider" id="s1" >
+                <input class="imgCheck" type="radio" name="slider" id="s2" checked>
+                <input class="imgCheck" type="radio" name="slider" id="s3">
+                <label for="s1" id="slide1"><img src="homepage/3/Ellipse 27.png" alt=""></label>
+                <label for="s2" id="slide2"><img src="homepage/3/Ellipse 28.png" alt=""></label>
+                <label for="s3" id="slide3"><img src="homepage/3/Ellipse 26.png" alt=""></label>
+            </div>
+            <h1>
+                Take Your Furry Friend With You
+            </h1>
+            <div>
+                <p>
+                    The M8 Offers Adequate Storage For Your Kit And A Spacious Box For Your Kitty. Never Leave Your Pet At Home Again And Make Your Ride More Wholesome Than Ever!
+                </p>
+            </div>
+        </div>
+        
+        <div class="hybrid-design">
+            <div class="details">
+                <h1>
+                    Hybrid Design
+                    Versatile Ride
+                </h1>
+                <p>
+                    Attach the height and angle-adjustable seat to experience the comfort of an eBike. Remove the seat and switch back to the scooter.
+                </p>
+            </div>
+            <div class="container">
+                <div id="comparison">
+                    <figure>
+                    <div id="handle"></div>
+                    <div id="divisor"></div>
+                    </figure>
+                    <input type="range" min="0" max="100" value="50" id="slider2" oninput="moveDivisor()">
+                </div>
+            </div>
+        </div>
+        <div class="other-popular-products">
+            <div class="box">
+                <div class="box-header">
+                    <h3>
+                        Other Popular Products
+                    </h3>  
+                    <a href="">see all →</a>
+                </div>
+                <div class="box-item">
+                    <div class="box-product">
+                        <div class="box-image">
+                            <img src="homepage/5/bag.jpg" alt="Product">
+                        </div>
+                        <p>
+                            M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
+                        </p>
+                    </div>
+                    <div class="box-product">
+                        <div class="box-image">
+                            <img src="homepage/5/seat.jpg" alt="Product">
+                        </div>
+                        <p>
+                            M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
+                        </p>
+                    </div>
+                    <div class="box-product">
+                        <div class="box-image">
+                            <img src="homepage/5/Urbetters-Cell-Phone-Holder.jpg" alt="Product">
+                        </div>
+                        <p>
+                            M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="response">
+            <div class="desc">
+                <p class="animate__animated animate__lightSpeedInLeft">“I mostly use level 3 on the Urbetter M8. It is comfortable to sit on and it does have the dampener in it so it does soak up a few of those bumps there in the ride which is great.”</span>
+            </div> 
+            <div class="avatar">
+                <img class="active" draggable="false" src="homepage/image 46.png" alt="Avatar1" desc="I Mostly Use Level 3 On The Urbetter M8. It Is Comfortable To Sit On And It Does Have The Dampener In It So It Does Soak Up A Few Of Those Bumps There In The Ride Which Is Great.">
+                <img src="homepage/Ellipse 40.png" alt="Avatar2" desc="Description 2" class="Lorem">
+                
+                <img src="homepage/Ellipse 41.png" alt="Avatar3" desc="Description 3">
+                <img src="homepage/image 47.png" alt="Avatar4" desc="Description 4">
+            </div>
+        </div> 
+        <div class="about">
+            <div class="box-description">
+                <h3>
+                    Ride Better With Urbetter
+                </h3>
+                <p>
+                    Ditch the gas guzzlers and switch to our stylish, capable, portable, and green electric scooters. Our tiny commuters pack a lot of fun and plenty of space for you, your gear, and your furry friends.
+                </p>
+                <a href="#About US">
+                    About Us
+                </a>
+            </div>
+        </div>
+        <div class="blog">
+            <div class="blog-container">
+                <div class="blog-row1">
+                    <div>
+                        <h1>
+                            Urbetter Official Blog
+                        </h1><br/><br/>
+                        <a href="#Read All">
+                            Read all →
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-row2">
+                    <div class="blog-post">
+                        <div class="blog-head">
+                            <img src="homepage/7/Rectangle 19.jpg" alt="Blog-Image">
+                        </div>
+                        <div class="blog-body">
+                            <h3>10 Reasons you should buy an escooter in 2023 <span>14/07/2022</span></h3>
+                        </div>
+                        <div class="blog-footer">
+                            <span>Read Time: ~10 min</span>
+                            <a href="#Read">Read</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <div class="blog-head">
+                            <img src="homepage/7/Rectangle 20.jpg" alt="Blog-Image">
+                        </div>
+                        <div class="blog-body">
+                            <h3>10 Reasons you should buy an escooter in 2023 <span>14/07/2022</span></h3>
+                        </div>
+                        <div class="blog-footer">
+                            <span>Read Time: ~10 min</span>
+                            <a href="#Read">Read</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <h1>
+                Ride With us on instagram
+            </h1>
+            <div class="gallery-list">
+                <div class="gallery-scroll" id="galleryScroll">
+                    <div class="gallery-card">
+                        <img src="homepage/8/1.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/2.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/3.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/4.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/5.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/6.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/7.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/8.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="homepage/8/8.jpg" alt="Image 1">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-control width">
+                <div>
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                        <p> <span id="demo"></span></p>
+                    </div>
+                    <a href="#Follow" class="follow-button">
+                        Follow <span>@Urbetter</span><span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-header">
+            <div class="column-1">
+                <img src="homepage/logo.png" alt="Logo">
+                <h4>NEWSLETTER</h4>
+                <p>Be among the first to know about our top products and exclusive offers. And get 10% off your first purchase NOW.
+                </p>
+                <input type="email"placeholder="Subscribe" name="email">
+                <input type="submit" value="Subscribe">
+            </div>
+            <div class="column-2">
+                <div class="site">
+                    <a href="#facebook"><img src="homepage/facebook.png" alt="Facebook"></a>
+                    <a href="#pinterest"><img src="homepage/pinterest.png" alt="Pinterest"></a>
+                    <a href="#instagram"><img src="homepage/instagram.png" alt="Instagram"></a>
+                    <a href="#youtube"><img src="homepage/youtube.png" alt="Youtube"></a>
+                    
+                </div>
+                <div class="information-policy">
+                    <ul>
+                        <li>
+                            <h3>Informations</h3>
+                        </li>
+                        <li>
+                            <a href="#About Us">About Us</a>
+                            
+                        </li>
+                        <li>
+                            <a href="#About Us">Contact Us</a>
+                            
+                            
+                        </li>
+                        <li>
+                            <a href="#About Us">Maintenance Guide</a>
+                            
+                            
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Policy</h3>
+                        </li>
+                        <li>
+                            <a href="#About Us">Return Policy</a>
+                            
+                            
+                        </li>
+                        <li>
+                            <a href="#About Us">Privacy Policy</a>
+                            
+                            
+                        </li>
+                        <li>
+                            <a href="#About Us">Terms of Sales</a>
+                            
+                            
+                        </li>
+                        <li>
+                            <a href="#About Us">Shipping Policy</a>
+                            
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="allrightreserved">
+            © 2022 Urbetter, Inc. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
