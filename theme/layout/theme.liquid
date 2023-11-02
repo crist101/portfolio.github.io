@@ -1,0 +1,15 @@
+<html>
+<head>
+    {{ content_for_header }}
+    {{ "style.css" |  asset_url |  stylesheet_tag }}
+    
+    {{ "jquery.min.js" |  asset_url |  script_tag }}
+    <title>{{ shop.name }}</title>
+</head>
+<body>
+    {%  render 'header.liquid' %} 
+    {{ content_for_layout }}
+    {%  render 'footer.liquid' %} 
+    {{ "script.js" |  asset_url |  script_tag }}
+</body>
+</html>

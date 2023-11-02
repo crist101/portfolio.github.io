@@ -1,0 +1,231 @@
+<main>
+    <div class="info">
+        <div class="info-item">
+            <img src="{{ 'delivery.png' |  asset_url}}" alt="Info">
+            <p>
+                <span class="info-label">Fast</span> Delivery
+            </p>
+        </div>
+        <div class="info-item">
+            <img src="{{ 'security.png' |  asset_url}}" alt="Security">
+            <p>
+                <span class="info-label">1 Year</span> Warranty
+            </p>
+        </div>
+        <div class="info-item">
+            <img src="{{ 'shipping.png' |  asset_url}}" alt="Shipping">
+            <p>
+                <span class="info-label">Free</span> Shipping
+            </p>
+        </div>
+        <div class="info-item">
+            <img src="{{ 'technical-support.png' |  asset_url}}"  alt="Technical Support">
+            <p>
+                <span class="info-label">Live</span> Customer Service
+            </p>
+        </div>
+        <div class="info-item">
+            <img src="{{ 'smile 1.png' |  asset_url}}" alt="Info">
+            <p>
+                <span class="info-label">Comfortable</span> Ride
+            </p>
+        </div>
+    </div>
+    <div class="featured-product">               
+        <h1>Pack Everything & Ride In Style</h1>
+        <img src="{{ collections["Featured-Products"].image |  image_url }}" alt="Feature Product">
+        {{ collections["Featured-Products"].description }}
+    </div>
+    <div class="featured-image">
+        <video playsinline autoplay muted loop poster="homepage/image 30.png">
+            <source src="https://cdn.shopify.com/videos/c/o/v/0f99d8d1ff184a32be45f2afdb9d5633.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="featured-image-multiple">
+        <div class="group-image" id="slider">
+            <input class="imgCheck" type="radio" name="slider" id="s1" >
+            <input class="imgCheck" type="radio" name="slider" id="s2" checked>
+            <input class="imgCheck" type="radio" name="slider" id="s3">
+            {% for products in collections["Top-Products"].products %}
+                
+                <label for="s{{ forloop.index }}" id="slide{{ forloop.index }}"><img src="{{ products.featured_image | image_url }}" alt=""></label>
+            {% endfor %}
+        </div>
+        <h1>
+            Take Your Furry Friend With You
+        </h1>
+        <div>
+            {{ collections["Top-Products"].description }}
+        </div>
+    </div>
+    
+    <div class="hybrid-design">
+        <div class="details">
+            <h1>
+                Hybrid Design
+                Versatile Ride
+            </h1>
+            <p>
+                Attach the height and angle-adjustable seat to experience the comfort of an eBike. Remove the seat and switch back to the scooter.
+            </p>
+        </div>
+        <div class="container">
+            <div id="comparison">
+                <figure>
+                <div id="handle"></div>
+                <div id="divisor"></div>
+                </figure>
+                <input type="range" min="0" max="100" value="50" id="slider2" oninput="moveDivisor()">
+            </div>
+        </div>
+    </div>
+    <div class="other-popular-products">
+        <div class="box">
+            <div class="box-header">
+                <h3>
+                    Other Popular Products
+                </h3>  
+                <a href="">see all →</a>
+            </div>
+            <div class="box-item">
+                <div class="box-product">
+                    <div class="box-image">
+                        <img src="homepage/5/bag.jpg" alt="Product">
+                    </div>
+                    <p>
+                        M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
+                    </p>
+                </div>
+                <div class="box-product">
+                    <div class="box-image">
+                        <img src="homepage/5/seat.jpg" alt="Product">
+                    </div>
+                    <p>
+                        M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
+                    </p>
+                </div>
+                <div class="box-product">
+                    <div class="box-image">
+                        <img src="homepage/5/Urbetters-Cell-Phone-Holder.jpg" alt="Product">
+                    </div>
+                    <p>
+                        M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="response">
+        <div class="desc">
+            <p class="animate__animated animate__lightSpeedInLeft">“I mostly use level 3 on the Urbetter M8. It is comfortable to sit on and it does have the dampener in it so it does soak up a few of those bumps there in the ride which is great.”</span>
+        </div> 
+        <div class="avatar">
+            <img class="active" draggable="false" src="homepage/image 46.png" alt="Avatar1" desc="I Mostly Use Level 3 On The Urbetter M8. It Is Comfortable To Sit On And It Does Have The Dampener In It So It Does Soak Up A Few Of Those Bumps There In The Ride Which Is Great.">
+            <img src="homepage/Ellipse 40.png" alt="Avatar2" desc="Description 2" class="Lorem">
+            
+            <img src="homepage/Ellipse 41.png" alt="Avatar3" desc="Description 3">
+            <img src="homepage/image 47.png" alt="Avatar4" desc="Description 4">
+        </div>
+    </div> 
+    <div class="about">
+        <div class="box-description">
+            <h3>
+                Ride Better With Urbetter
+            </h3>
+            <p>
+                Ditch the gas guzzlers and switch to our stylish, capable, portable, and green electric scooters. Our tiny commuters pack a lot of fun and plenty of space for you, your gear, and your furry friends.
+            </p>
+            <a href="#About US">
+                About Us
+            </a>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="blog-container">
+            <div class="blog-row1">
+                <div>
+                    <h1>
+                        Urbetter Official Blog
+                    </h1><br/><br/>
+                    <a href="#Read All">
+                        Read all →
+                    </a>
+                </div>
+            </div>
+            <div class="blog-row2">
+                <div class="blog-post">
+                    <div class="blog-head">
+                        <img src="homepage/7/Rectangle 19.jpg" alt="Blog-Image">
+                    </div>
+                    <div class="blog-body">
+                        <h3>10 Reasons you should buy an escooter in 2023 <span>14/07/2022</span></h3>
+                    </div>
+                    <div class="blog-footer">
+                        <span>Read Time: ~10 min</span>
+                        <a href="#Read">Read</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-head">
+                        <img src="homepage/7/Rectangle 20.jpg" alt="Blog-Image">
+                    </div>
+                    <div class="blog-body">
+                        <h3>10 Reasons you should buy an escooter in 2023 <span>14/07/2022</span></h3>
+                    </div>
+                    <div class="blog-footer">
+                        <span>Read Time: ~10 min</span>
+                        <a href="#Read">Read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <h1>
+            Ride With us on instagram
+        </h1>
+        <div class="gallery-list">
+            <div class="gallery-scroll" id="galleryScroll">
+                <div class="gallery-card">
+                    <img src="homepage/8/1.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/2.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/3.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/4.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/5.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/6.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/7.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/8.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="homepage/8/8.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+        <div class="gallery-control width">
+            <div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                    <p> <span id="demo"></span></p>
+                </div>
+                <a href="#Follow" class="follow-button">
+                    Follow <span>@Urbetter</span><span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,76 @@
+<header>
+        <video playsinline autoplay muted loop>
+            <source src="https://cdn.shopify.com/videos/c/o/v/cc83ffa1d68441858cb68631f82322cd.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav class="nav" >
+            <div class="logo">
+                <img src="{{ shop.brand.logo |  image_url }}"  alt="logo">
+            </div>
+            <div class="links">
+                <ul>
+                    {% for link  in linklists.main-menu.links  %} 
+                        <li>
+                            {{ link.title |  link_to: link.url }}
+                        </li>
+                     {% endfor %}
+                </ul>
+                <ul class="right">
+                    <li>
+                        <a href="#Search" class="search-icon">
+                            <span>Search </span>
+                            <img src="{{ "Group 108.png" | asset_url }}" alt="Search" srcset="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ACcount" class="account-icon">
+                            <span>Account </span>
+                            <img src="{{ "Group 86.png" | asset_url }}" alt="Search" srcset="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Cart" class="cart-icon">
+                            <span>Cart </span>
+                            <img src="{{ "Group 1.png" | asset_url }}" alt="Search" srcset="">
+                        </a>
+                    </li>
+                    <li class="language" id="select-language">
+                        <a href="#" id="selected-language">
+                            <span>Language </span>
+                            <img src="{{ "us.png" | asset_url }}" alt="SelectedFlag">
+                            <img src="{{ "chevron-down.svg" | asset_url }}" alt="chevron-down">
+                        </a>
+                        <div class="Selection">
+                            <ul>
+                                <li data-src="{{ "ad.png" | asset_url }}">
+                                    <img src="{{ "ad.png" | asset_url }}" alt="ad"> AD
+                                </li>
+                                <li data-src="{{ "ae.png" | asset_url }}">
+                                    <img src="{{ "ae.png" | asset_url }}" alt="ae"> ae
+                                </li>
+                                <li data-src="{{ "us.png" | asset_url }}">
+                                    <img src="{{ "us.png" | asset_url }}" alt="us"> us-EN
+                                </li>
+                                <li data-src="{{ "ph.png" | asset_url }}">
+                                    <img src="{{ "ph.png" | asset_url }}" alt="ph"> ph
+                                </li>
+                                <li data-src="{{ "pr.png" | asset_url }}">
+                                    <img src="{{ "pr.png" | asset_url }}" alt="pr"> pr
+                                </li>
+                                <li data-src="{{ "ps.png" | asset_url }}">
+                                    <img src="{{ "ps.png" | asset_url }}" alt="ps"> ps
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="hamburger">
+                <span></span> <span></span> <span></span>
+            </button>
+        </nav>
+        <h1>
+            <span style="display: block;margin-bottom: 26px">Make Your Life Electric</span>
+            <a href="#Discover More" id="discovermore">Discover More →</a>
+        </h1>
+    </header>
