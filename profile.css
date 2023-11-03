@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Comfortaa:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Comfortaa", sans-serif;
+  text-transform: capitalize;
+  list-style-type: none;
+  text-decoration-line: none;
+  color: #000;
+}
+
+body {
+  max-width: 1920px;
+  background: black;
+  margin: 0 auto;
+}
+
+header, main, footer {
+  background: white;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  padding: 30px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .logo h1 {
+  font-size: 37px;
+}
+header nav .logo h1 span {
+  color: orange;
+}
+header nav ul {
+  display: flex;
+  gap: 30px;
+}
+header nav ul li a {
+  cursor: pointer;
+}
+header nav ul li a:hover {
+  filter: drop-shadow(1px 5px 3px black);
+}
+
+main .welcome-row {
+  display: flex;
+  min-height: 500px;
+  gap: 10px;
+}
+main .welcome-row div {
+  display: grid;
+  place-content: center;
+  width: 50%;
+}
+main .welcome-row div:nth-child(1) {
+  justify-content: center;
+}
+main .welcome-row div:nth-child(2) {
+  justify-content: start;
+}
+main .welcome-row div:nth-child(2) h1 {
+  text-align: left;
+  font-weight: 500;
+  font-size: 60px;
+  color: orange;
+}
+main .welcome-row div ul li {
+  font-size: 50px;
+}
+main .welcome-row div h1 {
+  text-align: left;
+  font-weight: 500;
+  font-size: 60px;
+}
+
+/*# sourceMappingURL=profile.css.map */
