@@ -4,7 +4,9 @@
     {{ "style.css" |  asset_url |  stylesheet_tag }}
     
     {{ "jquery.min.js" |  asset_url |  script_tag }}
+    <link rel="shortcut icon" href="{{ shop.brand.logo |  image_url }}" type="image/x-icon">
     <title>{{ shop.name }}</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     {%  render 'header.liquid' %} 

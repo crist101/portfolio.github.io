@@ -82,37 +82,24 @@
     </div>
     <div class="other-popular-products">
         <div class="box">
+            
             <div class="box-header">
                 <h3>
                     Other Popular Products
                 </h3>  
-                <a href="">see all →</a>
+                <a href="{{ link_to: product.url }}">see all →</a>
             </div>
             <div class="box-item">
-                <div class="box-product">
-                    <div class="box-image">
-                        <img src="homepage/5/bag.jpg" alt="Product">
+                {% for products in collections["Top-Products"].products %}
+                    <div class="box-product">
+                        <div class="box-image">
+                            <img src="{{ products.featured_image | image_url : width : 600px }}" alt="Product">
+                        </div>
+                        <p>
+                            {{ products.title }}<span>{{ products.price | money }}</span><a href="#Plus">+</a>
+                        </p>
                     </div>
-                    <p>
-                        M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
-                    </p>
-                </div>
-                <div class="box-product">
-                    <div class="box-image">
-                        <img src="homepage/5/seat.jpg" alt="Product">
-                    </div>
-                    <p>
-                        M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
-                    </p>
-                </div>
-                <div class="box-product">
-                    <div class="box-image">
-                        <img src="homepage/5/Urbetters-Cell-Phone-Holder.jpg" alt="Product">
-                    </div>
-                    <p>
-                        M8 Removable Seat<span>€38.00</span><a href="#Plus">+</a>
-                    </p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -121,11 +108,12 @@
             <p class="animate__animated animate__lightSpeedInLeft">“I mostly use level 3 on the Urbetter M8. It is comfortable to sit on and it does have the dampener in it so it does soak up a few of those bumps there in the ride which is great.”</span>
         </div> 
         <div class="avatar">
-            <img class="active" draggable="false" src="homepage/image 46.png" alt="Avatar1" desc="I Mostly Use Level 3 On The Urbetter M8. It Is Comfortable To Sit On And It Does Have The Dampener In It So It Does Soak Up A Few Of Those Bumps There In The Ride Which Is Great.">
-            <img src="homepage/Ellipse 40.png" alt="Avatar2" desc="Description 2" class="Lorem">
-            
-            <img src="homepage/Ellipse 41.png" alt="Avatar3" desc="Description 3">
-            <img src="homepage/image 47.png" alt="Avatar4" desc="Description 4">
+            {% for item in shop.metaobjects.feedback.values %}
+                
+                <img src="{{ item.image |  image_url  }}" alt="Avatar4" desc="{{ item.details.value }}" {% if forloop.index == 1 %}class ="active"
+                    
+                {% endif %}>
+            {% endfor %}
         </div>
     </div> 
     <div class="about">
@@ -154,30 +142,21 @@
                 </div>
             </div>
             <div class="blog-row2">
-                <div class="blog-post">
-                    <div class="blog-head">
-                        <img src="homepage/7/Rectangle 19.jpg" alt="Blog-Image">
+                {% for post in blogs.News.articles %}
+                    <div class="blog-post">
+                        <div class="blog-head">
+                            <img src="{{ post.image.src |  image_url:  }}" alt="Blog-Image">
+                        </div>
+                        <div class="blog-body">
+                            <h3>{{ post.title }} <span>{{ post.published_at | date: "%d / %m / %Y" }}</span></h3>
+                        </div>
+                        <div class="blog-footer">
+                            <span>Read Time: ~10 min</span>
+                            <a href="{{ post.url }}">Read</a>
+                        </div>
                     </div>
-                    <div class="blog-body">
-                        <h3>10 Reasons you should buy an escooter in 2023 <span>14/07/2022</span></h3>
-                    </div>
-                    <div class="blog-footer">
-                        <span>Read Time: ~10 min</span>
-                        <a href="#Read">Read</a>
-                    </div>
-                </div>
-                <div class="blog-post">
-                    <div class="blog-head">
-                        <img src="homepage/7/Rectangle 20.jpg" alt="Blog-Image">
-                    </div>
-                    <div class="blog-body">
-                        <h3>10 Reasons you should buy an escooter in 2023 <span>14/07/2022</span></h3>
-                    </div>
-                    <div class="blog-footer">
-                        <span>Read Time: ~10 min</span>
-                        <a href="#Read">Read</a>
-                    </div>
-                </div>
+                {% endfor %}
+                
             </div>
         </div>
     </div>
@@ -187,33 +166,11 @@
         </h1>
         <div class="gallery-list">
             <div class="gallery-scroll" id="galleryScroll">
-                <div class="gallery-card">
-                    <img src="homepage/8/1.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/2.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/3.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/4.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/5.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/6.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/7.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/8.jpg" alt="Image 1">
-                </div>
-                <div class="gallery-card">
-                    <img src="homepage/8/8.jpg" alt="Image 1">
-                </div>
+                {% for item in shop.metaobjects['gallery']['gallery-et1lec93'].gallery.value %}
+                    <div class="gallery-card">
+                        <img src="{{ item |  image_url }}" alt="Image 1">
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <div class="gallery-control width">

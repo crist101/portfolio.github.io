@@ -10,56 +10,31 @@
             </div>
             <div class="column-2">
                 <div class="site">
-                    <a href="#facebook"><img src="homepage/facebook.png" alt="Facebook"></a>
-                    <a href="#pinterest"><img src="homepage/pinterest.png" alt="Pinterest"></a>
-                    <a href="#instagram"><img src="homepage/instagram.png" alt="Instagram"></a>
-                    <a href="#youtube"><img src="homepage/youtube.png" alt="Youtube"></a>
-                    
+                    {% for item in shop.metaobjects.socialmedia.values %}
+                        <a href="{{ item.socialmedia }}"><img src="{{ item.icon |  image_url:  }}" alt="{{ item.application }}"></a>
+                    {% endfor %}
+
                 </div>
                 <div class="information-policy">
                     <ul>
                         <li>
                             <h3>Informations</h3>
                         </li>
-                        <li>
-                            <a href="#About Us">About Us</a>
-                            
-                        </li>
-                        <li>
-                            <a href="#About Us">Contact Us</a>
-                            
-                            
-                        </li>
-                        <li>
-                            <a href="#About Us">Maintenance Guide</a>
-                            
-                            
-                        </li>
+                        {% for link in linklists.information-link.links %}
+                            <li>
+                                {{ link.title |  link_to: link.url }}
+                            </li>
+                        {% endfor %}
                     </ul>
                     <ul>
                         <li>
                             <h3>Policy</h3>
                         </li>
-                        <li>
-                            <a href="#About Us">Return Policy</a>
-                            
-                            
-                        </li>
-                        <li>
-                            <a href="#About Us">Privacy Policy</a>
-                            
-                            
-                        </li>
-                        <li>
-                            <a href="#About Us">Terms of Sales</a>
-                            
-                            
-                        </li>
-                        <li>
-                            <a href="#About Us">Shipping Policy</a>
-                            
-                            
-                        </li>
+                        {% for link in linklists.policy-menu.links %}
+                            <li>
+                                {{ link.title |  link_to: link.url }}
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
